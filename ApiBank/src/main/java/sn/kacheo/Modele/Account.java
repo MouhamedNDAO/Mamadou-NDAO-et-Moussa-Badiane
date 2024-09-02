@@ -1,4 +1,4 @@
-package sn.kacheo.model;
+package sn.kacheo.Modele;
 
 import java.math.BigDecimal;
 

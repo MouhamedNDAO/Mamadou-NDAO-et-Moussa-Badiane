@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import sn.kacheo.model.Transaction;
+import sn.kacheo.Modele.Transaction;
 
 public interface AccountService {
 

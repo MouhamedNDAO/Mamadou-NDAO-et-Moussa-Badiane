@@ -9,8 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import sn.kacheo.model.Account;
-import sn.kacheo.model.Transaction;
+import sn.kacheo.Modele.Account;
+import sn.kacheo.Modele.Transaction;
 import sn.kacheo.repository.AccountRepository;
 import sn.kacheo.repository.TransactionRepository;
 

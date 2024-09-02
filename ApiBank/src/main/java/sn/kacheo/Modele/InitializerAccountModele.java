@@ -1,4 +1,4 @@
-package com.mamadou.banque.Modele;
+package sn.kacheo.Modele;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

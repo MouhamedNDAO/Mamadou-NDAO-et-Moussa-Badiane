@@ -1,8 +1,8 @@
-package com.mamadou.banque.Repository;
+package sn.kacheo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.mamadou.banque.Modele.InitializerAccountModele;
+import sn.kacheo.Modele.InitializerAccountModele;
 
 public interface InitializerAccountRepository extends JpaRepository<InitializerAccountModele, Long> {
 

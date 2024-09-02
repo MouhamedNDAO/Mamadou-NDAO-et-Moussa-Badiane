@@ -1,11 +1,11 @@
-package sn.kacheo.controleur;
+package sn.kacheo.controller;
 import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
-import sn.kacheo.model.Transaction;
+import sn.kacheo.Modele.Transaction;
 import sn.kacheo.service.AccountService;
 
 @RestController

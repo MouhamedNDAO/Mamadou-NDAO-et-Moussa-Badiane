@@ -4,7 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import sn.kacheo.model.Transaction;
+import sn.kacheo.Modele.Transaction;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Long>{
 	

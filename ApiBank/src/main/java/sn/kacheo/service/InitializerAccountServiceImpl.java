@@ -1,12 +1,11 @@
-package com.mamadou.banque.Service;
+package sn.kacheo.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.mamadou.banque.Modele.InitializerAccountModele;
-import com.mamadou.banque.Repository.InitializerAccountRepository;
-
+import sn.kacheo.Modele.InitializerAccountModele;
+import sn.kacheo.repository.InitializerAccountRepository;
 import lombok.AllArgsConstructor;
 
 @Service

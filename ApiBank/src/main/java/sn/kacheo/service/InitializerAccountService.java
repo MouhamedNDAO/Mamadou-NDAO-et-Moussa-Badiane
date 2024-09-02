@@ -1,8 +1,8 @@
-package com.mamadou.banque.Service;
+package sn.kacheo.service;
 
 import java.util.List;
 
-import com.mamadou.banque.Modele.InitializerAccountModele;
+import sn.kacheo.Modele.InitializerAccountModele;
 
 public interface InitializerAccountService {
  InitializerAccountModele creer(InitializerAccountModele account);

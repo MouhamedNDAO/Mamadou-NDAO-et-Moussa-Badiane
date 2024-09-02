@@ -1,4 +1,4 @@
-package com.mamadou.banque.Controller;
+package sn.kacheo.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mamadou.banque.Modele.InitializerAccountModele;
-import com.mamadou.banque.Service.InitializerAccountService;
+import sn.kacheo.Modele.InitializerAccountModele;
+import sn.kacheo.service.InitializerAccountService;
 
 import lombok.AllArgsConstructor;
 
