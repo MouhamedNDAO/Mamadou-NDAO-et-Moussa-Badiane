@@ -1,0 +1,61 @@
+Partie 3 du Sujet d’Examen de Webservice : Évaluation et Comparaison
+
+
+Introduction
+
+Quand il s'agit de concevoir des services web pour une banque, il est crucial de choisir la bonne technologie en fonction des besoins spécifiques en matière de performance, de sécurité et de facilité d'implémentation. Voici une comparaison détaillée entre REST et SOAP, ainsi que les avantages et inconvénients de chaque approche qu’on a élaborer après avoir utiliser les deux services.
+
+1. Comparaison entre REST et SOAP
+
+Performance :
+
+- REST :Généralement plus performant que SOAP en raison de son utilisation plus légère du protocole HTTP et de son format de données (JSON ou XML). REST est souvent plus rapide car il évite la surcharge des messages SOAP, ce qui est particulièrement avantageux pour les applications qui nécessitent des réponses rapides.
+- SOAP : Peut-être moins performant en raison de la surcharge du format XML (plus verbeux que JSON) et des en-têtes SOAP. Les échanges de données sont souvent plus lourds, ce qui peut impacter la performance dans des environnements à haute charge.
+
+Facilité d’implémentation :
+
+- REST : Plus simple à mettre en œuvre en raison de sa simplicité et de son adhérence aux standards HTTP. Les développeurs trouvent généralement REST plus facile à intégrer avec des outils et des bibliothèques modernes, et le JSON est plus facile à manipuler que le XML d’où son utilisation unanimes dans les entreprises du fais du gain de travail supplémentaire qu’elle les apporte.
+- SOAP : Plus complexe à mettre en œuvre en raison de la spécification stricte de SOAP, des en-têtes, et des enveloppes XML. La configuration des services SOAP nécessite souvent plus de code et de configuration par rapport à REST.
+
+Interfaçage :
+
+- REST : Utilise les méthodes HTTP (GET, POST, PUT, DELETE) pour les opérations. Cela le rend facile à utiliser et à comprendre pour les développeurs familiers avec le protocole HTTP. REST est également très compatible avec les architectures web modernes et les frameworks front-end comme Angular.
+- SOAP : Utilise des opérations définies dans un WSDL (Web Services Description Language), ce qui permet une intégration plus formelle et standardisée. Cependant, cela peut rendre l’interfaçage plus complexe par rapport à REST.
+
+2. Avantages et Inconvénients de chaque approche dans le contexte d’une banque en ligne
+
+REST :
+
+Avantages :
+
+- Performance : Moins de surcharge de données, ce qui se traduit par des temps de réponse plus rapides. Cela est crucial pour les services bancaires en ligne qui nécessitent des transactions en temps réel.
+- Simplicité : Plus facile à comprendre et à utiliser pour les développeurs, ce qui accélère le développement et la maintenance.
+- Scalabilité : REST est mieux adapté aux environnements scalables grâce à sa légèreté. Cela permet de gérer efficacement un grand nombre d’appels API simultanés.
+
+Inconvénients :
+
+- Sécurité : REST n’a pas de standards de sécurité intégrés comme SOAP. Il est donc nécessaire de mettre en place des mesures supplémentaires (OAuth, SSL/TLS) pour assurer la sécurité des transactions bancaires.
+- Transactions complexes : Moins adapté aux transactions complexes nécessitant des opérations atomiques et de coordination, qui peuvent être gérées plus facilement avec SOAP.
+
+SOAP :
+
+Avantages :
+
+- Sécurité : SOAP offre des spécifications de sécurité robustes comme WS-Security, ce qui est important pour les transactions financières sensibles. Cela permet une intégration sécurisée pour les services bancaires.
+- Transactions complexes : Idéal pour les services nécessitant des transactions ACID (Atomicité, Cohérence, Isolation, Durabilité), ce qui peut être crucial pour la gestion des transactions financières.
+
+Inconvénients :
+
+- Performance : La surcharge de SOAP en termes de taille de message et de complexité des en-têtes peut réduire la performance. Cela peut entraîner des latences dans les transactions, ce qui est moins souhaitable pour une application bancaire en ligne.
+- Complexité : La configuration et l’intégration peuvent être plus compliquées, ce qui peut ralentir le développement et nécessiter plus de ressources pour la maintenance.
+
+Conclusion
+
+Pour une application bancaire, REST est souvent préféré pour ses performances et sa simplicité, particulièrement pour des services où la rapidité et la scalabilité sont cruciales. Cependant, si la sécurité et la gestion de transactions complexes sont primordiales, SOAP peut offrir des avantages significatifs. Le choix entre REST et SOAP doit donc être basé sur une analyse approfondie des besoins spécifiques de l’application bancaire en ligne, notamment en termes de performance, de sécurité, et de complexité des transactions.
+
+PS : Travail de :
+
+Mamadou NDAO - INE: N00398020181 - Email: mamadou.ndao5@unchk.edu.sn
+
+Moussa BADIANE - INE:N00B80620181  - Email: moussa.badiane1@unchk.edu.sn
+
