@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiBankApplication<ApiBank>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "sn.kacheo.ApiBankApplication",
+            "projectName": "ApiBank",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
