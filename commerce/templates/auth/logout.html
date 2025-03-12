@@ -1,0 +1,13 @@
+{% extends 'commerce/base.html' %}
+
+{% block content %}
+    <h2 class="text-center my-4">Déconnexion</h2>
+    <p class="text-center">Êtes-vous sûr de vouloir vous déconnecter ?</p>
+    <div class="text-center">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Se déconnecter</button>
+            <a href="/" class="btn btn-secondary">Annuler</a>
+        </form>
+    </div>
+{% endblock %}

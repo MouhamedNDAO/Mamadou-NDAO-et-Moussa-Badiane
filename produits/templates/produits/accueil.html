@@ -1,0 +1,30 @@
+{% extends 'commerce/base.html' %}
+
+{% block content %}
+    <h2 class="text-center my-4">Nos Produits Disponibles</h2>
+
+    <div class="row">
+        {% for produit in produits %}
+            <div class="col-md-4 mb-4">
+                <div class="card" onclick="window.location.href='{% url 'details' produit.id %}'">
+                    {% if produit.image %}
+                        <img src="{{ produit.image.url }}" class="card-img-top" alt="{{ produit.nom }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image par défaut">
+                    {% endif %}
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">{{ produit.nom }}</h5>
+                        <p class="fw-bold">Prix: {{ produit.prix }} franc</p>
+                        
+                        <a href="{% url 'ajouter_panier' %}?produit={{ produit.id }}" class="btn btn-success">
+                            Ajouter au Panier 🛒
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p class="text-center">Aucun produit disponible pour le moment.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

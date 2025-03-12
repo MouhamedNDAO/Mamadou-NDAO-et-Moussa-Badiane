@@ -1,0 +1,42 @@
+{% extends "commerce/base.html" %}
+{% block content %}
+    <h2>Liste des Produits</h2>
+    <a href="{% url 'ajouter_produit' %}" class="btn btn-primary">Ajouter un produit</a>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Stock</th>
+                <th>Catégorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produit in produits %}
+                <tr>
+                    <td>
+                        {% if produit.image %}
+                            <img src="{{ produit.image.url }}" alt="{{ produit.nom }}" width="50">
+                        {% else %}
+                            Pas d'image
+                        {% endif %}
+                    </td>
+                    <td>{{ produit.nom }}</td>
+                    <td>{{ produit.description }}</td>
+                    <td>{{ produit.prix }} franc</td>
+                    <td>{{ produit.stock }}</td>
+                    <td>{{ produit.categorie.nom }}</td>
+                    <td>
+                        <a href="{% url 'modifier_produit' produit.pk %}" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="{% url 'supprimer_produit' produit.pk %}" class="btn btn-danger btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="7">Aucun produit disponible.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

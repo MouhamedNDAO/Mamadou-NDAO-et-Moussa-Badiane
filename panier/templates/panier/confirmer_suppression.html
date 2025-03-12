@@ -1,0 +1,11 @@
+{% extends "commerce/base.html" %}
+
+{% block content %}
+    <h2>Supprimer "{{ panier_item.produit.nom }}" du panier ?</h2>
+    <p>Êtes-vous sûr de vouloir supprimer ce produit de votre panier ?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+        <a href="{% url 'liste_panier' %}" class="btn btn-secondary">Annuler</a>
+    </form>
+{% endblock %}

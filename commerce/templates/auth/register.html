@@ -1,0 +1,14 @@
+{% extends 'commerce/base.html' %}
+
+{% block content %}
+    <h2 class="text-center my-4">Créer un compte</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

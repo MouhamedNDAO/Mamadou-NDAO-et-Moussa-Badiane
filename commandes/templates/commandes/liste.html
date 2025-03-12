@@ -1,0 +1,32 @@
+{% extends "commerce/base.html" %}
+{% block content %}
+    <h2>Vos Commandes</h2>
+    <a href="{% url 'passer_commande' %}" class="btn btn-primary">Passer une commande</a>
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Statut</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for commande in commandes %}
+                <tr>
+                    <td>{{ commande.id }}</td>
+                    <td>{{ commande.date_commande }}</td>
+                    <td>{{ commande.get_statut_display }}</td>
+                    <td>{{ commande.total }} €</td>
+                    <td>
+                        <a href="{% url 'modifier_commande' commande.pk %}" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="{% url 'supprimer_commande' commande.pk %}" class="btn btn-danger btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="5">Aucune commande passée.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

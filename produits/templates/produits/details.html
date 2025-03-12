@@ -1,0 +1,29 @@
+{%extends 'commerce/base.html'%}
+{%block title %}
+    Details about {{ produits.nom }}
+{% endblock %}
+{% block content %}
+
+        <div class="col-md-4 mb-4 mx-auto">
+                <div class="card">
+                    {% if produits.image %}
+                        <img src="{{ produits.image.url }}" class="card-img-top" alt="{{ produits.nom }}">
+                    {% else %}
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Image par défaut">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ produits.nom }}</h5>
+                        <h6 class="card-title"><b>Categorie:</b> {{ produits.categorie }}</h6>
+                        <p class="card-text">{{ produits.description|truncatechars:100 }}</p>
+                        <p class="fw-bold">Prix: {{ produits.prix }} franc</p>
+                        <p class="fw-bold">Stock: {{ produits.stock }}</p>
+                        <p>Mise a jours le <mark>{{ produits.date_ajout }}</mark></p>
+
+                        <a href="{% url 'ajouter_panier' %}?produit={{ produits.id }}" class="btn btn-success">
+                            Ajouter au Panier 🛒
+                        </a>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
